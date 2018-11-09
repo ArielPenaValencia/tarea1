@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
 
 		// Receive the same string back from the server
 		std::cout << "Received: ";               // Setup to print the echoed string
-		while (totalBytesReceived < echoStringLen) {
+		while (echoStringLen) {
 			// Receive up to the buffer size bytes from the sender
 			if ((bytesReceived = (sock.recv(echoBuffer, RCVBUFSIZE))) <= 0) {
 				std::cerr << "Unable to read";
